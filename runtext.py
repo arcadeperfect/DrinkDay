@@ -1,24 +1,22 @@
 #!/usr/bin/env python
 # Display a runtext with double-buffering.
-from samplebase_a import SampleBase
+from samplebase import SampleBase
 from rgbmatrix import graphics
 import time
-import random
 
 
 class RunText(SampleBase):
-    def __init__(self, text, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(RunText, self).__init__(*args, **kwargs)
-        self.text = text
         self.parser.add_argument("-t", "--text", help="The text to scroll on the RGB LED panel", default="Hello world!")
 
     def run(self):
         offscreen_canvas = self.matrix.CreateFrameCanvas()
         font = graphics.Font()
         font.LoadFont("./fonts/7x13.bdf")
-        textColor = graphics.Color(random.randint(0,255), random.randint(0,255), random.randint(0,255))
+        textColor = graphics.Color(255, 255, 0)
         pos = offscreen_canvas.width
-        my_text = self.text
+        my_text = self.args.text
 
         while True:
             offscreen_canvas.Clear()
@@ -32,12 +30,7 @@ class RunText(SampleBase):
 
 
 # Main function
-
-def runTheText(text):
-    if __name__ == "__main__":
-        run_text = RunText(text)
-        if (not run_text.process()):
-            run_text.print_help()
-
-
-runTheText('test')
+if __name__ == "__main__":
+    run_text = RunText()
+    if (not run_text.process()):
+        run_text.print_help()
