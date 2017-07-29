@@ -12,3 +12,8 @@ class Animal:
 x = Animal('jake', 28, 4)
 
 print x.arms
+
+class Dog(Animal):
+	def __init__(self, Name='', Age=0):
+		self.Name = Name
+		self.

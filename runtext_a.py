@@ -7,10 +7,10 @@ import random
 
 
 class RunText(SampleBase):
-    def __init__(self, text, *args, **kwargs):
-        super(RunText, self).__init__(*args, **kwargs)
+    def __init__(self, text):
+        super(RunText, self).__init__()
         self.text = text
-        self.parser.add_argument("-t", "--text", help="The text to scroll on the RGB LED panel", default="Hello world!")
+        #self.parser.add_argument("-t", "--text", help="The text to scroll on the RGB LED panel", default="Hello world!")
 
     def run(self):
         offscreen_canvas = self.matrix.CreateFrameCanvas()
