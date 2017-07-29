@@ -3,4 +3,4 @@ import runtext_a
 from imageLoader_a import imageLoader
 
 
-runtext_a.runTheText('test')
+runtext_a.runTheText('test', [10,50,40])
