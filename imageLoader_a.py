@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+# handy info here
+# https://pymotw.com/2/multiprocessing/communication.html
 import time
 import sys
 from rgbmatrix import RGBMatrix, RGBMatrixOptions

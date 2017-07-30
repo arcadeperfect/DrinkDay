@@ -28,7 +28,7 @@ def loadImage():
 	print 'butt'
 '''
 
-img = 'drink.png'
+img = 'alex.png'
 image = Image.open(img)
 
 # Configuration for the matrix
