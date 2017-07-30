@@ -35,18 +35,19 @@ class RunText(SampleBase):
 # Main function
 
 def runTheText(text,colour):
-    print __name__
-    if __name__ == "runtext_a":
+
+    if __name__ == "__main__":
         run_text = RunText(text,colour)
         if (not run_text.process()):
             run_text.print_help()
 
+'''
 def runTheText(text, colour):
     run_text_instance = RunText(text, colour)
     #while True:
         #print 'running'
     if (not run_text_instance.process()):
         run_text.print_help()
+'''
 
-
-#runTheText('test',[100,40,90])
+runTheText('test',[100,40,90])
