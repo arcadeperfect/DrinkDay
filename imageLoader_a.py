@@ -4,12 +4,14 @@ import sys
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 from multiprocessing import Process
+from multiprocessing import Queue
 
 img1 = 'drink.png'
 img2 = 'alex.png'
 
-def loadImage():
-    img = 'drink.png'
+def loadImage(img, q):
+    #img = 'drink.png'
+    img2='alex.png'
     options = RGBMatrixOptions()
     options.brightness = 10
     options.rows = 16
@@ -20,17 +22,30 @@ def loadImage():
     image = Image.open(img)
     matrix.SetImage(image.convert('RGB'))
     while True:
-        print 'butt'
-        time.sleep(0.5)
-
+        message = q.get()
+        print message
+        if message == 'quit':
+            image = Image.open(img2)
+            matrix.SetImage(image.convert('RGB'))
+        #time.sleep(1)
+        
 
 if __name__ == '__main__':
-    p1 = Process(target=loadImage,)
+
+    myQueue = Queue()
+
+
+    p1 = Process(target=loadImage, args=(img1, myQueue))
     p1.start()
-    #p2 = Process(target=loadImage, args=(img2),)
-    #p2.start()
-    print 'butts'
-    time.sleep(5)
-    print 'big butts'
-    p1.terminate()
-    time.sleep(3)
+    
+    x = 0
+
+    while True:
+        time.sleep(0.5)
+        myQueue.put('qtest')
+        x += 1
+        if x > 5:
+            myQueue.put('quit')
+
+    
+
