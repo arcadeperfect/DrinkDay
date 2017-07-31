@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 import runtext_a
-from imageLoader_a import imageLoader
+import imageLoader as il
+import multiprocessing as mp
+from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
-img = 'drink.png'
+img1 = 'images/drink.png'
+img2 = 'images/dontDrink.png'
 brightness = 100
 
+'''
 def runTheText(text,colour):
 
     if __name__ == "__main__":
@@ -13,11 +17,15 @@ def runTheText(text,colour):
             run_text.print_help()
 
 
-
-
-
-
 #runTheText('farts', [10,50,40])
+'''
 
-while True:
-	imageLoader(img, brightness, 10)
+if __name__ == '__main__':
+
+    myQueue = mp.Queue()
+    process1 = il.image_loader(myQueue)
+    process1.start()
+
+    myQueue.put(il.message(img1,10))
+    #time.sleep(5)
+    myQueue.put(il.message(img2,20))

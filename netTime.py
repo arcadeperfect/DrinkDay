@@ -12,9 +12,8 @@ response = client.request('pool.ntp.org', version=3)
 to deliberately set the system time wrong for testing purposes:
 
 sudo date -s "Thu Aug  9 21:31:26 UTC 2012"
-'''
 
-'''
+
 print "system time \n"
 print datetime.datetime.now()
 print "\n"
@@ -25,10 +24,23 @@ print time.ctime(response.tx_time)
 print '\n'
 '''
 
-### Set system time
-
+### Set system time correctily from internet
+'''
 def setTime():
 	print 'setting system time'
 	os.system('date ' + time.strftime('%m%d%H%M%Y.%S',time.localtime(response.tx_time)))
-	
-setTime()
+'''	
+
+
+def oddDay():
+	dayOfYear = (datetime.datetime.now().timetuple().tm_yday)	
+	if dayOfYear % 2 == 1:
+		return True
+	else:
+		return False
+
+#print oddDay()
+
+
+
+#def oddDay():
