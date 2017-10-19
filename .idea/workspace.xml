@@ -2,10 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8779c767-c7f9-48a5-9862-7a29949d1811" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dateTime_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.AppleDouble/.Parent" afterPath="$PROJECT_DIR$/.AppleDouble/.Parent" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.AppleDouble/alex.png" afterPath="$PROJECT_DIR$/.AppleDouble/alex.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.AppleDouble/drink.png" afterPath="$PROJECT_DIR$/.AppleDouble/drink.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/.AppleDouble/.Parent" afterPath="$PROJECT_DIR$/resources/fonts/.AppleDouble/.Parent" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/alex.png" afterPath="$PROJECT_DIR$/resources/images/alex.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/cat1.jpg" afterPath="$PROJECT_DIR$/resources/images/cat1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/cat2.jpg" afterPath="$PROJECT_DIR$/resources/images/cat2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/dontDrink.png" afterPath="$PROJECT_DIR$/resources/images/dontDrink.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/drink.png" afterPath="$PROJECT_DIR$/resources/images/drink.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.AppleDouble/imageLoader.py" afterPath="$PROJECT_DIR$/.AppleDouble/imageLoader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.AppleDouble/netTime.py" afterPath="$PROJECT_DIR$/.AppleDouble/netTime.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DrinkDay.iml" afterPath="$PROJECT_DIR$/.idea/DrinkDay.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/class.py" afterPath="$PROJECT_DIR$/class.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drinkDay.py" afterPath="$PROJECT_DIR$/drinkDay.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events.py" afterPath="$PROJECT_DIR$/events.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gcs/gcs.py" afterPath="$PROJECT_DIR$/gcs/gcs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imageEvent.py" afterPath="$PROJECT_DIR$/imageEvent.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imageLoader.py" afterPath="$PROJECT_DIR$/imageLoader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mp_test.py" afterPath="$PROJECT_DIR$/mp_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/netTime.py" afterPath="$PROJECT_DIR$/netTime.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsing.py" afterPath="$PROJECT_DIR$/parsing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/queues.py" afterPath="$PROJECT_DIR$/queues.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/10x20.bdf" afterPath="$PROJECT_DIR$/resources/fonts/10x20.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/4x6.bdf" afterPath="$PROJECT_DIR$/resources/fonts/4x6.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/5x7.bdf" afterPath="$PROJECT_DIR$/resources/fonts/5x7.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/5x8.bdf" afterPath="$PROJECT_DIR$/resources/fonts/5x8.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/6x10.bdf" afterPath="$PROJECT_DIR$/resources/fonts/6x10.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/6x12.bdf" afterPath="$PROJECT_DIR$/resources/fonts/6x12.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/6x13.bdf" afterPath="$PROJECT_DIR$/resources/fonts/6x13.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/6x13B.bdf" afterPath="$PROJECT_DIR$/resources/fonts/6x13B.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/6x13O.bdf" afterPath="$PROJECT_DIR$/resources/fonts/6x13O.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/6x9.bdf" afterPath="$PROJECT_DIR$/resources/fonts/6x9.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/7x13.bdf" afterPath="$PROJECT_DIR$/resources/fonts/7x13.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/7x13B.bdf" afterPath="$PROJECT_DIR$/resources/fonts/7x13B.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/7x13O.bdf" afterPath="$PROJECT_DIR$/resources/fonts/7x13O.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/7x14.bdf" afterPath="$PROJECT_DIR$/resources/fonts/7x14.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/7x14B.bdf" afterPath="$PROJECT_DIR$/resources/fonts/7x14B.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/8x13.bdf" afterPath="$PROJECT_DIR$/resources/fonts/8x13.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/8x13B.bdf" afterPath="$PROJECT_DIR$/resources/fonts/8x13B.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/8x13O.bdf" afterPath="$PROJECT_DIR$/resources/fonts/8x13O.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/9x15.bdf" afterPath="$PROJECT_DIR$/resources/fonts/9x15.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/9x15B.bdf" afterPath="$PROJECT_DIR$/resources/fonts/9x15B.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/9x18.bdf" afterPath="$PROJECT_DIR$/resources/fonts/9x18.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/9x18B.bdf" afterPath="$PROJECT_DIR$/resources/fonts/9x18B.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/AUTHORS" afterPath="$PROJECT_DIR$/resources/fonts/AUTHORS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/README" afterPath="$PROJECT_DIR$/resources/fonts/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/README.md" afterPath="$PROJECT_DIR$/resources/fonts/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/clR6x12.bdf" afterPath="$PROJECT_DIR$/resources/fonts/clR6x12.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/helvR12.bdf" afterPath="$PROJECT_DIR$/resources/fonts/helvR12.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/fonts/tom-thumb.bdf" afterPath="$PROJECT_DIR$/resources/fonts/tom-thumb.bdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtext.py" afterPath="$PROJECT_DIR$/runtext.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtext_a.py" afterPath="$PROJECT_DIR$/runtext_a.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samplebase_a.py" afterPath="$PROJECT_DIR$/samplebase_a.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threading/threadTest.py" afterPath="$PROJECT_DIR$/threading/threadTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threading/threading_example_1.py" afterPath="$PROJECT_DIR$/threading/threading_example_1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threading/threading_example_2.py" afterPath="$PROJECT_DIR$/threading/threading_example_2.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,19 +73,21 @@
       <file leaf-file-name="parsing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parsing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
+            <state relative-caret-position="545">
+              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class.py">
+      <file leaf-file-name="drinkDay.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drinkDay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#22#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,20 +96,18 @@
         <entry file="file://$PROJECT_DIR$/dateTime_tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="samplebase_a.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samplebase_a.py">
+      <file leaf-file-name="class.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
@@ -117,6 +171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,21 +180,14 @@
               <item name="DrinkDay" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrinkDay" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DrinkDay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DrinkDay" type="462c0819:PsiDirectoryNode" />
-              <item name="gcs" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Envs/drinkDay/bin/python" />
+    <property name="last_opened_file_path" value="/Bish/PRGRM/.virtualenvs/drinkDay/bin/python2.7" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -273,17 +322,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17734376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15178572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37466666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -304,6 +353,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/parsing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dateTime_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samplebase_a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parsing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -507,43 +590,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drinkDay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="3" lean-forward="false" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/samplebase_a.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dateTime_tests.py">
+    <entry file="file://$PROJECT_DIR$/class_import.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dateTime_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drinkDay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parsing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
+        <state relative-caret-position="545">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding />
         </state>
       </provider>

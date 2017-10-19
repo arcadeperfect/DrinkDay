@@ -12,7 +12,3 @@ class Animal:
 x = Animal('jake', 28, 4)
 
 print x.arms
-
-class Dog(Animal):
-	de
-		self.
