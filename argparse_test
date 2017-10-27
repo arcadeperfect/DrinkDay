@@ -1,27 +1,60 @@
 import argparse
-import sys
 import shlex
+import datetime
+
+found_images = [
+    'poop.jpg -d=1 -p=3 t=10:12 -D=121019',
+    'waffle.jpg --drinkDay=0 --priority=4 --time=20:10  --date=991017',
+    'cat.jpg -d=0 -p=30',
+    'dog.tif -d=0'
+    ]
+
+def date_to_object(date_string):
+    try:
+        return datetime.date(int(date_string[0:2]) + 2000, int(date_string[2:4]), int(date_string[4:7]))
+    except:
+        return None
+
+def time_to_object(time_string):
+    try:
+        t = [int(t) for t in time_string.split(':')]
+        t = datetime.time(t[0], t[1])
+        return t
+    except:
+        return None
+
+def ddParse(file_name):
+
+    argument_list = shlex.split(file_name)
+
+    parser = argparse.ArgumentParser(description='drinkDay parser')
+    parser.add_argument('-d', '--drinkDay', type=int)
+    parser.add_argument('-p', '--priority', type=int)
+    parser.add_argument('-t', '--time')
+    parser.add_argument('-D', '--date')
+
+    options = parser.parse_known_args(argument_list)[0]
+    name = argument_list[0]
+
+    img={
+        'name':name,
+        'drinkDay':options.drinkDay,
+        'priority':options.priority,
+        'date': date_to_object(options.date),
+        'time': time_to_object(options.time)
+        }
+
+    return img
 
 
-parser = argparse.ArgumentParser(description='test')
-parser.add_argument('-b', type=int)
-parser.add_argument('-a', type=int)
-argument_list = ['-b=1', '-a=5', 'c=3', 'd=4']
+print '\n\n ***** test ***** \n\n'
 
-#parsed = parser.parse_known_args(argument_list)
+image_list = []
 
-options= parser.parse_known_args(argument_list)
-
-print options[0].b
+for i in found_images:
+    image_list.append (ddParse(i))
 
 
-# print 'b', parsed.b
-#
-#
+for i in  image_list:
 
-
-#
-# argString = '-vvvv -c "yes" --foo bar --some_flag'
-# print shlex.split(argString)
-#
-#
+    print i
