@@ -1,0 +1,27 @@
+import argparse
+import sys
+import shlex
+
+
+parser = argparse.ArgumentParser(description='test')
+parser.add_argument('-b', type=int)
+parser.add_argument('-a', type=int)
+argument_list = ['-b=1', '-a=5', 'c=3', 'd=4']
+
+#parsed = parser.parse_known_args(argument_list)
+
+options= parser.parse_known_args(argument_list)
+
+print options[0].b
+
+
+# print 'b', parsed.b
+#
+#
+
+
+#
+# argString = '-vvvv -c "yes" --foo bar --some_flag'
+# print shlex.split(argString)
+#
+#
