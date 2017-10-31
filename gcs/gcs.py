@@ -11,7 +11,7 @@ from os import listdir
 
 
 def downloadNew(bucketName='drinkday_images', imagePath='./img'):
-    bucket = storage.Client().get_bucket(bucketName)
+    bucket = storage.Client("DrinkDay").get_bucket(bucketName)
     for blob in bucket.list_blobs():
         if not blob.name in listdir(imagePath):
             print 'downloading %s' % blob.name
@@ -19,3 +19,4 @@ def downloadNew(bucketName='drinkday_images', imagePath='./img'):
 
 
 downloadNew()
+
