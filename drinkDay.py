@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import runtext_a
-import imageLoader as il
+import mtrx_image_loader as il
 import multiprocessing as mp
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
