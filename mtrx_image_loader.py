@@ -2,25 +2,24 @@
 
 # handy info here
 # https://pymotw.com/2/multiprocessing/communication.html
+#from rgbmatrix import RGBMatrix, RGBMatrixOptions
 import time
 import sys
-from rgbmatrix import RGBMatrix, RGBMatrixOptions
+from rgbmatrix import Adafruit_RGBmatrix
 from PIL import Image
 import multiprocessing as mp
-import netTime
+# import netTime
 
-img1 = 'images/drink.png'
-img2 = 'images/dontDrink.png'
-img3 = 'images/cat1.jpg'
-img4 = 'images/cat2.jpg'
-img5 = 'images/dontDrink.png'
+img1 = './resources/static_images/drink.png'
+img2 = './resources/static_images/dontDrink.png'
 
-options = RGBMatrixOptions()
-options.brightness = 50
-options.rows = 16
-options.chain_length = 1
-options.parallel = 1
-options.hardware_mapping = 'regular'
+
+# options = RGBMatrixOptions()
+# options.brightness = 50
+# options.rows = 16
+# options.chain_length = 1
+# options.parallel = 1
+# options.hardware_mapping = 'regular'
 
 
 class message(object):
@@ -37,15 +36,17 @@ class image_loader(mp.Process):
         self.q = q
 
     def run(self):
-        matrix = RGBMatrix(options = options)
-        print 'running'
+        matrix = Adafruit_RGBmatrix(16, 1)
+        #print 'running'
         while True:
-            message = q.get()
+            message = self.q.get()
             img = message.img
             dur = message.duration                        
             image = Image.open(img)
+            image.load()
             image.thumbnail((32, 16), Image.ANTIALIAS)
-            matrix.SetImage(image.convert('RGB'))
+            
+            matrix.SetImage(image.im.id)
             if dur >= 0:
                 time.sleep(dur)
                 matrix.Clear()
