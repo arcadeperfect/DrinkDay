@@ -9,14 +9,19 @@ https://cloud.google.com/storage/docs/object-basics#download
 from google.cloud import storage
 from os import listdir
 
+path = './resources/images'
+bucket = 'drinkday_images'
+project = "DrinkDay"
 
-def downloadNew(bucketName='drinkday_images', imagePath='./img'):
-    bucket = storage.Client("DrinkDay").get_bucket(bucketName)
+def downloadNew(bucketName, imagePath, project):
+    bucket = storage.Client(project).get_bucket(bucketName)
     for blob in bucket.list_blobs():
         if not blob.name in listdir(imagePath):
             print 'downloading %s' % blob.name
-            blob.download_to_filename('./img/%s' % blob.name)
+            blob.download_to_filename('%s/%s' % (path,blob.name))
 
-
-downloadNew()
+def find_images(path):
+    files = listdir(path)
+    return files
+#downloadNew(bucket,path,project)
 

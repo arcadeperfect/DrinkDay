@@ -33,25 +33,26 @@ def parse(file_name):
 
     name = argument_list[0]
 
-    img={
+    img ={
         'name':name,
         'drinkDay':options.drinkDay,
         'priority':options.priority,
         'date': date_to_object(options.date),
-        'time': time_to_object(options.time)
+        'time': time_to_object(options.time),
+        'file': file_name
         }
     return img
 
 
 ### Tests
 
-found_images = [
-    'poop.jpg -z=1 -p=3 t=10:12 -d=121019',
-    'waffle.jpg --drinkDay=0 --priority=4 --time=20:10  --date=991017',
-    'cat.jpg -z=0 -p=30',
-    'dog.tif -z=0',
-    'turtle.exr -z=1 -t=3 -d=1'
-    ]
+# found_images = [
+#     'poop.jpg -z=1 -p=3 t=10:12 -d=121019',
+#     'waffle.jpg --drinkDay=0 --priority=4 --time=20:10  --date=991017',
+#     'cat.jpg -z=0 -p=30',
+#     'dog.tif -z=0',
+#     'turtle.exr -z=1 -t=3 -d=1'
+#     ]
 
 
 def score(found_images,today_is_drinkDay):
@@ -64,23 +65,26 @@ def score(found_images,today_is_drinkDay):
         name = parsed_image['name']
         drink_day = parsed_image['drinkDay']
         date = parsed_image['date']
+        file = image
+        #print 'file', file
 
         if drink_day == today_is_drinkDay:
             score = 3
-            ranking[name] = [parsed_image['name'],score]
+            ranking[name] = [name,score,file]
 
         if drink_day == None:
             score = 1
-            ranking[name] = [parsed_image['name'],score]
+            ranking[name] = [name, score,file]
 
         if date == datetime.date.today():
             score = 5
-            ranking[name] = [parsed_image['name'],score]
+            ranking[name] = [name,score,file]
 
     for i in ranking:
-        rankingList.append([ranking[i][1], ranking[i][0]])
+        rankingList.append([ranking[i][1], ranking[i][0], ranking[i][2]])
 
     return sorted(rankingList)[::-1]
+
 
 def select(sorted_images):
     highest_score = sorted_images[0][0]
