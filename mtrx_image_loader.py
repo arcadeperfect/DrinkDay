@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 
 # handy info here
@@ -7,6 +8,7 @@ import time
 import sys
 from rgbmatrix import Adafruit_RGBmatrix
 from PIL import Image
+from PIL import ImageEnhance
 import multiprocessing as mp
 # import netTime
 
@@ -44,8 +46,11 @@ class image_loader(mp.Process):
             dur = message.duration                        
             image = Image.open(img)
             image.load()
-            image.thumbnail((32, 16), Image.ANTIALIAS)
-            
+            #image = image.thumbnail((32, 16), Image.ANTIALIAS)
+
+            enhancer = ImageEnhance.Brightness( image )
+            image = enhancer.enhance( 0.5 )
+
             matrix.SetImage(image.im.id)
             if dur >= 0:
                 time.sleep(dur)
@@ -54,6 +59,14 @@ class image_loader(mp.Process):
 
 
 q = mp.Queue()
+c = 0 
+
+print 'butt'
+
+
+from random import randint
+import gcs
+path = './resources/images'
 
 if __name__ == '__main__':
 
@@ -62,26 +75,21 @@ if __name__ == '__main__':
     p1.start()
 
 
-    '''
-    q.put(message(img1,1))
-    #time.sleep(5)
-    q.put(message(img3,5))
-
-    q.put(message(img5,-1))
-
-    #q.put(message(img5,20))
-    '''
-    print netTime.oddDay()
     while True:
-        if netTime.oddDay() == True:
-            print 'tru'
-            q.put(message(img1,-1))
 
-        elif netTime.oddDay() == False:
-            print 'flse'
-            q.put(message(img2,-1))
+        found_images = gcs.find_images(path)
+
+        print c
+        if c % 10 == 0:
+            print 'printing'
+            file = [img1,img2][randint(0,1)]
+            q.put(message(file,-1))
+        else:
+            print 'didnt'
+
+        c += 1
+
         time.sleep(1)
-
 
 
 

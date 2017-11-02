@@ -21,7 +21,9 @@ def downloadNew(bucketName, imagePath, project):
             blob.download_to_filename('%s/%s' % (path,blob.name))
 
 def find_images(path):
-    files = listdir(path)
+    files = [x for x in listdir(path) if x[0]!='.']
     return files
 #downloadNew(bucket,path,project)
 
+if __name__ == '__main__':
+	downloadNew(bucket, path, project)
