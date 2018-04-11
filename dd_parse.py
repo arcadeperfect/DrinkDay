@@ -2,11 +2,18 @@ import argparse
 import shlex
 import datetime
 from random import randint
+from os import listdir
 
+path = "./resources/images"
+
+def find_images(path):
+    files = [x for x in listdir(path) if x[0]!='.']
+    return files
 
 def date_to_object(date_string):
     try:
-        return datetime.date(int(date_string[0:2]) + 2000, int(date_string[2:4]), int(date_string[4:7]))
+        date = datetime.date(int(date_string[0:2]) + 2000, int(date_string[2:4]), int(date_string[4:7]))
+        return date
     except:
         #print "i really hated your date string: ", date_string
         return None
@@ -23,6 +30,7 @@ def time_to_object(time_string):
 def parse(file_name):
 
     argument_list = shlex.split(file_name)
+    #print argument_list
     parser = argparse.ArgumentParser(description='drinkDay parser')
     parser.add_argument('-z', '--drinkDay', type=int)
     parser.add_argument('-p', '--priority', type=int)
@@ -30,8 +38,9 @@ def parse(file_name):
     parser.add_argument('-d', '--date')
 
     options = parser.parse_known_args(argument_list)[0]
-
+    #print "found options: ", options
     name = argument_list[0]
+    #print "name" ,name
 
     img ={
         'name':name,
@@ -41,6 +50,7 @@ def parse(file_name):
         'time': time_to_object(options.time),
         'file': file_name
         }
+    #print img
     return img
 
 
@@ -59,6 +69,7 @@ def score(found_images,today_is_drinkDay):
 
     ranking = {}
     rankingList = []
+    print '\n'
 
     for image in found_images:
         parsed_image = parse(image)
@@ -67,7 +78,9 @@ def score(found_images,today_is_drinkDay):
         date = parsed_image['date']
         file = image
         #print 'file', file
-
+        # if date == datetime.date.today():
+        #     print 'matched date', name, date
+            
         if drink_day == today_is_drinkDay:
             score = 3
             ranking[name] = [name,score,file]
@@ -77,19 +90,31 @@ def score(found_images,today_is_drinkDay):
             ranking[name] = [name, score,file]
 
         if date == datetime.date.today():
-            score = 5
-            ranking[name] = [name,score,file]
+            print 'matched date: '
 
-    for i in ranking:
+            score = 5
+            print name, score, file
+            ranking[name] = [name,score,file]
+            print ranking[name]
+            print '***************************'
+
+    print ranking
+
+    for i in ranking.keys():
+        print 'in ranking:', ranking[i]
         rankingList.append([ranking[i][1], ranking[i][0], ranking[i][2]])
+    #print rankingList
+    print '\n'
 
     return sorted(rankingList)[::-1]
 
 
-def select(sorted_images):
-    highest_score = sorted_images[0][0]
+def select(scored_images):
+    
+    highest_score = scored_images[0][0]
+    print "highest score is: ", highest_score
     selection_pool = []
-    for i in sorted_images:
+    for i in scored_images:
         if i[0] == highest_score:
             selection_pool.append(i)
     randomIndex = randint(0,len(selection_pool)-1)
@@ -99,13 +124,28 @@ def select(sorted_images):
 
 if __name__ == '__main__':
 
+    images = find_images(path)
+
     print '\n\n ***** test ***** \n\n'
 
-    image_list = []
+    scored = score(images,0)
 
-    for i in found_images:
-        image_list.append (ddParse(i))
+    print select(scored)
+
+    # for i in score(images,1):
+    #     print i
+    #selection = select(score (images,1))
+
+    #print selection
 
 
-    for i in image_list:
-        print i['name'], i['drinkDay'], i['priority'], i['date'], i['time']
+    #found_images = find_images(path)
+    #print found_images
+    #image_list = []
+
+    # for i in found_images:
+    #     image_list.append (parse(i))
+
+
+    #for i in image_list:
+        #print i['name'], i['drinkDay'], i['priority'], i['date'], i['time']

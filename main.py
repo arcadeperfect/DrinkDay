@@ -1,44 +1,42 @@
-import dd_parse as p
-from datetime import datetime
-import time
+from socket import gethostname
+from sys import platform
+
+host = gethostname()
+os = platform
+
+if os == 'darwin':
+    testing = True
+else:
+    testing = False
+
 import os
-import gcs
-from display_image import display_image
+import time
+import multiprocessing as mp
+from datetime import datetime
+
+import dd_parse as p
+from dd_screenShow import screenShow
+from dd_download import download, find_downloaded_images
 
 
+if not testing:
 
-# found_images = [
-#     'poop.jpg -z=1 -p=3 t=10:12 -d=121019',
-#     'waffle.jpg --drinkDay=0 --priority=4 --time=20:10  --date=171030',
-#     'cat.jpg --date=171030',
-#     'dog.tif -z=1 --date=171030',
-#     'turtle.exr -p=1',
-#     #'catastrophe -p=10 --date=171030',
-#     #'calamaty -p=10 --date=171030',
-#     'dd1 -z=1',
-#     'dd2 -z=1',
-#     'dd3 -z=1',
-#     'dd4 -z=1',
-#     'dd5 -z=1',
-#     'dd6 -z=1',
-#     'dd7 -z=1',
-#     'dd8 -z=1',
-#     'dd9 -z=1',
-#     'nd1 -z=0',
-#     'nd2 -z=0',
-#     'nd3 -z=0',
-#
-#     ]
+    from dd_matrix_image import message, image_loader
+    #from rgbmatrix import Adafruit_RGBmatrix
+
 
 def today_is_drinkDay():
         return (datetime.now().timetuple().tm_yday)  % 2
 
+
+print host, os
+
 bucket = 'drinkday_images'
 project = "DrinkDay"
-
 path = './resources/images'
+
 interval = 1
-sleep = 1
+sleep = 10
 drink_day_invert = 1
 
 delta = 0
@@ -46,50 +44,94 @@ daystate = today_is_drinkDay()
 count = 0
 last = None
 
-print 'starting'
-
-while True:
-
-    #download images from google
-    gcs.downloadNew(bucket, path, project)
-
-    #list images on disk
-    found_images = gcs.find_images(path)
-    #print found_images
-    images = found_images
-
-    #do the sorting
-    selection = p.select(p.score (images, (drink_day_invert) - today_is_drinkDay()))
-
-    # first time, or if day changes
-    if count == 0 or today_is_drinkDay() != daystate:
-        last = selection
-        then = datetime.now()
-        daystate = today_is_drinkDay()
-        print 'first time', selection
-        display_image(path,selection[2])
+if not testing:
+    queue = mp.Queue()
+    process = image_loader(queue)
+    process.start()
 
 
-    #all other times
-    else:
-        delta = int((datetime.now()-then).total_seconds())
-        #print delta, datetime.now().second
-        #print delta, interval
-        print '\n'
 
-        if delta > interval:
+if __name__ == '__main__':
+    #print 'started'
+    #matrix = Adafruit_RGBmatrix(16, 1)
+
+
+    while True:
+        print count
+        
+        ## download images from ftp
+
+        print 'downloading off ftp \n'
+        download()
+
+        ## list images on disk
+        found_images = find_downloaded_images(path)
+        #print found_images
+        #print '2'
+
+        ## print found_images
+        images = found_images
+        print '\n\n\n** found images **\n '
+        for i in found_images:
+            print i
+        print '\n ********\n'
+        #print '3'
+
+        ## do the sorting
+        today_is_drinkDay_var = drink_day_invert-today_is_drinkDay()
+        #today_is_drinkDay_variable = 0
+
+        selection = p.select(p.score (images, today_is_drinkDay_var))
+
+        #print 'selection: ', selection
+        file = "%s/%s" %(path,selection[2])
+        #print file
+
+                ## first time, or if day changes
+        if count == 0 or today_is_drinkDay() != daystate:
+            print '\n***** first loop *****\n'
+            last = selection
             then = datetime.now()
+            daystate = today_is_drinkDay()
+            print 'first time', file
+            #display_image(path,selection[2])
+            print 'displayed', file, '\n****\n'
 
-            if selection != last:
+            if testing:
+                print path, file
+                screenShow(file)
+            else:
+                queue.put(message(file, -1))
 
-                print selection
-                display_image(path, selection[2])
-                #print datetime.now()
-                print '\n'
+        #all other times
+        else:
+            #print 'b'
+            delta = int((datetime.now()-then).total_seconds())
+            #print delta, datetime.now().second
+            #print delta, interval
+            
 
-                last = selection
+            if delta > interval:
+                then = datetime.now()
 
-    count +=1
-    print count
-    time.sleep(sleep)
+                if selection != last:
+                    #print 'c'
+
+                    print '\n', '***** displayed *****', file, '\n****\n'
+                    #display_image(path, selection[2])
+                    #print datetime.now()
+
+                    if testing:
+                        screenShow(path,file)
+                    else:
+                        queue.put(message(file, -1))
+
+
+
+                    last = selection
+
+        count +=1
+        #print count
+        print 'count: ', count
+        time.sleep(sleep)
 
